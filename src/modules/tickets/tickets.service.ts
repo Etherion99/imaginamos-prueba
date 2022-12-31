@@ -44,15 +44,17 @@ export class TicketsService {
       client.tickets.push(saved);
       await this.clientsRepository.save(client);
 
-      const technician = await this.techniciansRepository.findOne({
-        where: {
-          id: ticketDTO.technician.id,
-        },
-        relations: ['tickets'],
-      });
+      const technician = await this.techniciansRepository
+        .createQueryBuilder('technicians')
+        .select()
+        .orderBy('RANDOM()')
+        .getOne();
 
-      technician.tickets.push(saved);
-      await this.techniciansRepository.save(technician);
+      await this.techniciansRepository
+        .createQueryBuilder()
+        .relation(TechnicianEntity, 'tickets')
+        .of(technician)
+        .add(saved);
 
       const municipality = await this.municipalitiesRepository.findOne({
         where: {
@@ -78,8 +80,11 @@ export class TicketsService {
 
   async findOne(id: number): Promise<IHttpResponse> {
     try {
-      const ticket = await this.ticketsRepository.findOneBy({
-        id,
+      const ticket = await this.ticketsRepository.findOne({
+        where: {
+          id,
+        },
+        relations: ['technician', 'client', 'municipality'],
       });
 
       return {
@@ -96,7 +101,9 @@ export class TicketsService {
 
   async findAll(): Promise<IHttpResponse> {
     try {
-      const tickets = await this.ticketsRepository.find();
+      const tickets = await this.ticketsRepository.find({
+        relations: ['technician', 'client', 'municipality'],
+      });
 
       return {
         success: true,
