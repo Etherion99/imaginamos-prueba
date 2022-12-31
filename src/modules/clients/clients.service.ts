@@ -97,4 +97,23 @@ export class ClientsService {
       };
     }
   }
+
+  async getTickets(id: number): Promise<IHttpResponse> {
+    try {
+      const client = await this.clientsRepository.findOne({
+        where: { id },
+        relations: ['tickets'],
+      });
+
+      return {
+        success: true,
+        data: client.tickets,
+      };
+    } catch (error) {
+      return {
+        success: false,
+        message: error.message,
+      };
+    }
+  }
 }
