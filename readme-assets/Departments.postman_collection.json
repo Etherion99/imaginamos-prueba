@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "d0fb35b7-a892-4f43-8d10-92230fb560d2",
+		"name": "Departments",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8270922"
+	},
+	"item": [
+		{
+			"name": "Find all Departments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server}}/departments",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"departments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find one Department by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server}}/departments/d9f15432-809f-4b9a-b774-5bd285fa0dfd",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"departments",
+						"d9f15432-809f-4b9a-b774-5bd285fa0dfd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create one Department",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Santander\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server}}/departments",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"departments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update one Department",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"huila\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server}}/departments/06615492-4eb0-4aff-8080-62e188d4f20f",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"departments",
+						"06615492-4eb0-4aff-8080-62e188d4f20f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete one Department",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{server}}/departments/06615492-4eb0-4aff-8080-62e188d4f20f",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"departments",
+						"06615492-4eb0-4aff-8080-62e188d4f20f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Municipalities",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server}}/departments/municipalities/d9f15432-809f-4b9a-b774-5bd285fa0dfd",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"departments",
+						"municipalities",
+						"d9f15432-809f-4b9a-b774-5bd285fa0dfd"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

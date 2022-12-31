@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "ee780cb2-3c14-4094-96e0-17e9e1d7ba22",
+		"name": "Technicians",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8270922"
+	},
+	"item": [
+		{
+			"name": "Find all Technicians",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/technicians",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"technicians"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find one Technician by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/technicians/e5619291-0c32-45b0-8018-0f3ae62ee7ad",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"technicians",
+						"e5619291-0c32-45b0-8018-0f3ae62ee7ad"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create one Technician",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Duvan2\",\r\n    \"lastName\": \"Martinez2\",\r\n    \"admissionDate\": \"2022-12-30 00:00:00+00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/technicians",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"technicians"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update one Technician",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Duvan2\",\r\n    \"lastName\": \"Martinez2\",\r\n    \"admissionDate\": \"2022-12-31T00:00:00.000Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/technicians/e5619291-0c32-45b0-8018-0f3ae62ee7ad",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"technicians",
+						"e5619291-0c32-45b0-8018-0f3ae62ee7ad"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete one Technician",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/technicians/e5619291-0c32-45b0-8018-0f3ae62ee7ad",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"technicians",
+						"e5619291-0c32-45b0-8018-0f3ae62ee7ad"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get tickets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/technicians/tickets/9d3abeb4-4fa4-4ef3-a0cd-09741cd64670",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"technicians",
+						"tickets",
+						"9d3abeb4-4fa4-4ef3-a0cd-09741cd64670"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

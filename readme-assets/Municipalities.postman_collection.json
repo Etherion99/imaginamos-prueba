@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "eb6e2e2a-d325-41d5-8d60-718be847627f",
+		"name": "Municipalities",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8270922"
+	},
+	"item": [
+		{
+			"name": "Find all Municipalities",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/municipalities",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"municipalities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find one Municipality by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/municipalities/bbc0fb15-cda2-45b0-a94f-17c650951040",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"municipalities",
+						"bbc0fb15-cda2-45b0-a94f-17c650951040"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create one Municipality",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Bucaramanga\",\r\n    \"department\": {\r\n        \"id\": \"d9f15432-809f-4b9a-b774-5bd285fa0dfd\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/municipalities",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"municipalities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update one Municipality",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"piedecuesta\",\r\n    \"department\": {\r\n        \"id\": \"d9f15432-809f-4b9a-b774-5bd285fa0dfd\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/municipalities/d90f5477-d859-4c52-beb0-4146572dbc3b",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"municipalities",
+						"d90f5477-d859-4c52-beb0-4146572dbc3b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete one Municipality",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/municipalities/6f80f0c7-65bc-4d13-92c5-e697ee5f257e",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"municipalities",
+						"6f80f0c7-65bc-4d13-92c5-e697ee5f257e"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

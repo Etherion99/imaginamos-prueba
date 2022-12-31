@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "2cef0ea3-2f74-4a38-8dab-eb84cbe8fa99",
+		"name": "Clients",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8270922"
+	},
+	"item": [
+		{
+			"name": "Find all Clients",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server}}/clients",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find one Client by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server}}/clients/ccfe514b-0a7a-423c-9807-9f394883dc36",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"clients",
+						"ccfe514b-0a7a-423c-9807-9f394883dc36"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create one Client",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"juan\",\r\n    \"lastName\": \"trujillo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server}}/clients",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update one Client",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"juan2\",\r\n    \"lastName\": \"trujillo2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server}}/clients/a34caeb7-43e6-4b84-8c61-9eb2426c6f9e",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"clients",
+						"a34caeb7-43e6-4b84-8c61-9eb2426c6f9e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete one Client",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{server}}/clients/b5fc61fd-33b0-48d7-9395-172711fd39de",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"clients",
+						"b5fc61fd-33b0-48d7-9395-172711fd39de"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Tickets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server}}/clients/tickets/ccfe514b-0a7a-423c-9807-9f394883dc36",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"clients",
+						"tickets",
+						"ccfe514b-0a7a-423c-9807-9f394883dc36"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

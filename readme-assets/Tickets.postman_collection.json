@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "cd5648e7-01c8-4970-9068-7420bdf2fdfc",
+		"name": "Tickets",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8270922"
+	},
+	"item": [
+		{
+			"name": "Find all Tickets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/tickets",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"tickets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find one Ticket by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/tickets/a15b5394-ea2e-4f4c-82ef-bc9e7b729283",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"tickets",
+						"a15b5394-ea2e-4f4c-82ef-bc9e7b729283"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create one Ticket",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"address\": \"cra 5 # 10-52\",\r\n    \"payment\": 50000,\r\n    \"comments\": \"servicio rapido\",\r\n    \"serviceDate\": \"2022-12-30 00:00:00+00\",\r\n    \"done\": true,\r\n    \"client\": {\r\n        \"id\": \"ccfe514b-0a7a-423c-9807-9f394883dc36\"\r\n    },    \r\n    \"municipality\": {\r\n        \"id\": \"bbc0fb15-cda2-45b0-a94f-17c650951040\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/tickets",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"tickets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update one Ticket",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"address\": \"cra 5 # 10-53\",\r\n    \"payment\": 50000,\r\n    \"comments\": \"servicio rapido\",\r\n    \"serviceDate\": \"2022-12-30 00:00:00+00\",\r\n    \"done\": true,\r\n    \"client\": {\r\n        \"id\": \"ccfe514b-0a7a-423c-9807-9f394883dc36\"\r\n    },\r\n    \"technician\": {\r\n        \"id\": \"f36b803b-3c93-43e3-9c48-d55b8f84d843\"\r\n    },\r\n    \"municipality\": {\r\n        \"id\": \"bbc0fb15-cda2-45b0-a94f-17c650951040\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/tickets/a15b5394-ea2e-4f4c-82ef-bc9e7b729283",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"tickets",
+						"a15b5394-ea2e-4f4c-82ef-bc9e7b729283"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete one Ticket",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/tickets/d94a3e52-d2c4-41ed-bd28-95a797b904e5",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"tickets",
+						"d94a3e52-d2c4-41ed-bd28-95a797b904e5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
