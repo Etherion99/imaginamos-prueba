@@ -4,7 +4,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 
 @Injectable()
 export class DatabaseProvider {
-  static getConfigModule() {
+  static getDatabaseModule() {
     return TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
       useFactory: async (configService: ConfigService) => ({
