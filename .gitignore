@@ -36,3 +36,7 @@ lerna-debug.log*
 
 # Enviroment files
 .env
+
+# serverless build and deploy folders
+.build
+.serverless
