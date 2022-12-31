@@ -23,6 +23,8 @@ backend en NestJS (Node) para prueba técnica de imaginamos dockerizada y config
 
 # API
 
+- **En la carpeta [readme-assets/postman](/readme-assets/postman) se encuentran las colecciones**
+
 - para este caso el token del ticket corresponde al propio uuid de la columna id ya que sigue el estándar RFC 4122, en el caso hipotetico de que por cuestiones de seguridad no fuera conveniente utilizar el propio id de la tabla sería necesario agregar una nueva columna de token o si se prefiere generar desde el backend se podria utilizar la libreria UUID de npm para generar un UUID v4.
 
 - la asignación de tecnicos se hace de maner aleatoria a nivel de BD para evitar tener que consultar la lista completa de tecnicos y seleccionarlo geenrando un numero psudoaleatorio lo cual puede tormarse pesado en sistemas muy grandes.
@@ -67,4 +69,4 @@ backend en NestJS (Node) para prueba técnica de imaginamos dockerizada y config
   3. ejecutar un serverless deploy (el proceso tarda entre 300 y 400 segundos)
   4. agregar la url provista en la consola como variable "server" en el postman.
 
-- actualmente version final de la API esta desplegada en: https://wjbbdxkg0f.execute-api.us-east-1.amazonaws.com/dev/clients
+- actualmente version final de la API esta desplegada en: [AWS lambda function deployed](https://wjbbdxkg0f.execute-api.us-east-1.amazonaws.com/dev/clients)
