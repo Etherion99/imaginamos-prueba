@@ -17,6 +17,15 @@ backend en NestJS (Node) para prueba técnica de imaginamos dockerizada y config
 # API
 - para este caso el token del ticket corresponde al propio uuid de la columna id ya que sigue el estandar RFC 4122, en el caso hipotetico de que por cuestiones de seguridad no fuera conveniente utilizar el propio id de la tabla seria necesario agregar una nueva columna de token o si se prefiere generar desde el backend se podria utilizar la libreria UUID de npm para generar un UUID v4.
 
+- la asignación de tecnicos se hace de maner aleatoria a nivel de BD para evitar tener que consultar la lista completa de tecnicos y seleccionarlo geenrando un numero psudoaleatorio lo cual puede tormarse pesado en sistemas muy grandes.
+
+- adicional al CRUD basico para los mdoelos se incluyeron los siguienets endpoints:
+  - en departamento se agrego un endpoint para consultar los municipios asociados a un departaemnto especifico con base a su id, para efectos de esta prueba, en un sistema real para evitar la tarea de rellenar las tablas de departamentos y municipios se puede buscar una API online que cumpla este proposito o generar un JSON con la informacion oficial del DANE para rellenarlas.
+
+  - en clientes se agrego el endpoint para obtener los tiquetes asociados para mostrarle el historial de servicios al cliente.
+
+  - en tecnicos se agrego el endpoint para obtener los tiquetes asociados para que puedan ver las colicitues atendidas y pendientes.
+
 # NestJS
 - la prueba se construyó para trabajar con posgreSQL como SGBD sin embargo la inclusión de variables de conexión a la BD en las variables de entorno permite la conexión a los otros sistemas permitidos
 
