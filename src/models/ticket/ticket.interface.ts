@@ -10,5 +10,6 @@ export interface ITicket {
   address: string;
   payment: number;
   comments: string;
-  service_date: Date;
+  serviceDate: Date;
+  done: boolean;
 }

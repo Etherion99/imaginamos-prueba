@@ -31,5 +31,8 @@ export class TicketEntity implements ITicket {
   comments: string;
 
   @Column()
-  service_date: Date;
+  serviceDate: Date;
+
+  @Column()
+  done: boolean;
 }

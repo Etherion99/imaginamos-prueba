@@ -8,13 +8,13 @@ export class TechnicianEntity implements ITechnician {
   id: number;
 
   @Column()
-  firstname: string;
+  firstName: string;
 
   @Column()
-  lastname: string;
+  lastName: string;
 
   @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
-  fecha_ingreso: Date;
+  admissionDate: Date;
 
   @OneToMany((type) => TicketEntity, (tiquete) => tiquete.technician)
   tickets: TicketEntity[];
