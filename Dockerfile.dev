@@ -1,0 +1,17 @@
+FROM node:16.17.0-bullseye-slim As development
+
+WORKDIR /usr/src/app
+
+# Copy app dependency manifests to the container.
+# use chown command for change ownership of copied files from root user to Node user.
+COPY --chown=node:node package*.json ./
+
+# Bundle app source.
+COPY --chown=node:node . .
+
+
+# Clean install of dependencies.
+RUN npm ci --only=development
+
+# Use the node user instead of the root user.
+USER node
