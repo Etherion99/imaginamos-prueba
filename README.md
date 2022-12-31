@@ -6,11 +6,11 @@ backend en NestJS (Node) para prueba técnica de imaginamos dockerizada y config
 - se optó por un modelo sencillo que cumpliera las especificaciones de relacionar clientes y tecnicos a través de tiquetes, se incluyeron tambien tablas para los departamentos y municipios para poder especificar de forma exacta la ubicación del sistio donde se realiza el trabajo.
 
 - el modelo podría en dado caso ampliarse añadiendo opciones como por ejemplo:
--- una tabla de tipos de trabajo donde se especifique el tipo de tarea que debe realizar el técnico: instalaciones, manteniemntos, entre otros.
+  - una tabla de tipos de trabajo donde se especifique el tipo de tarea que debe realizar el técnico: instalaciones, manteniemntos, entre otros.
 
--- un campo tipo punto geografico para indicar la ubicacion exacta del servicio, esto aportaria informacion estrategica sobre las zonas de la ciudad donde menos se solicita el servicio para orientar el marketing hacia esas poblaciones, entre otros.
+  - un campo tipo punto geografico para indicar la ubicacion exacta del servicio, esto aportaria informacion estrategica sobre las zonas de la ciudad donde menos se solicita el servicio para orientar el marketing hacia esas poblaciones, entre otros.
 
---
+  - Una entidad de usuarios para abarcar tnato a los clientes como tecnicos e incluir opciones de logueo y proteger las rutas mediante un middleware o preferiblemente implementando guards.
 
 
 
