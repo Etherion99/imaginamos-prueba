@@ -42,4 +42,9 @@ export class TechniciansController {
   delete(@Param('id') id: number): Promise<IHttpResponse> {
     return this.techniciansService.delete(id);
   }
+
+  @Get('/tickets/:id')
+  getTickets(@Param('id') id: number): Promise<IHttpResponse> {
+    return this.techniciansService.getTickets(id);
+  }
 }
