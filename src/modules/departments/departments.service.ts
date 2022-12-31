@@ -97,4 +97,23 @@ export class DepartmentsService {
       };
     }
   }
+
+  async getMunicipalities(id: number): Promise<IHttpResponse> {
+    try {
+      const client = await this.departmentsRepository.findOne({
+        where: { id },
+        relations: ['municipalities'],
+      });
+
+      return {
+        success: true,
+        data: client.municipalities,
+      };
+    } catch (error) {
+      return {
+        success: false,
+        message: error.message,
+      };
+    }
+  }
 }

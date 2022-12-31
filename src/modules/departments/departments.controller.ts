@@ -42,4 +42,9 @@ export class DepartmentsController {
   delete(@Param('id') id: number): Promise<IHttpResponse> {
     return this.departmentsService.delete(id);
   }
+
+  @Get('/municipalities/:id')
+  getMunicipalities(@Param('id') id: number): Promise<IHttpResponse> {
+    return this.departmentsService.getMunicipalities(id);
+  }
 }
