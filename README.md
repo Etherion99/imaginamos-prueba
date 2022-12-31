@@ -55,7 +55,7 @@ backend en NestJS (Node) para prueba técnica de imaginamos dockerizada y config
 
 - proceso de dockerizado:
   1. los archivos de Dockerfile.dev, .dockerignore y docker-compose.yml ya se encuentran en el repositorio
-  2. ejecutar el comando docker-compose up en la raiz del proyecto (importante tener el local detenido para evitar conflicto de puertos).
+  2. ejecutar el comando docker-compose up --build en la raiz del proyecto (importante tener el local detenido para evitar conflicto de puertos).
 
 
 # Serverless
