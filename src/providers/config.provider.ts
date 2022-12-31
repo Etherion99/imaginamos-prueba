@@ -9,7 +9,7 @@ export class ConfigProvider {
     return ConfigModule.forRoot({
       load: [appConfig, databaseConfig],
       isGlobal: true,
-      envFilePath: ['.env.dev', '.env.prod'],
+      envFilePath: ['.env', '.env.dev', '.env.prod'],
       validationSchema: validationSchema,
     });
   }
