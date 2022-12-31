@@ -16,6 +16,13 @@ backend en NestJS (Node) para prueba técnica de imaginamos dockerizada y config
 
 # Docker
 
+- la imágen base "node:16.17.0-bullseye-slim" fue seleccionada debido a que se trata de una versión reciente y estable de Debian 11 en formato slim para reducir el consumo de recursos y con una versión LTS de node.
+
+- se utiliza el usuario node en lugar de root para mantener al mínimo los privilegios como una buena práctica de seguridad.
+
+- el comando "npm ci" asegura una instalación limpia de dependencias.
+
+- el archivo .dockerignore asegura que no se agreguen directorios de librerias como el node_modules, directorios y archivos de control de versiones como .git y .gitignore, archivos de log y archivos con variables de ambiente para prevenir filtración de secretos y credenciales de acceso, para el ejercicio actual y teniendo en cuenta que no se pretende compartir en un hub de imágenes docker ni va a contener información muy sensible, se omite la exclusión de los archivos .env.
 
 # Serverless
 
