@@ -23,7 +23,7 @@ backend en NestJS (Node) para prueba técnica de imaginamos dockerizada y config
 
 # API
 
-- **En la carpeta [readme-assets/postman](/readme-assets/postman/) se encuentran las colecciones**
+- **En la carpeta [readme-assets/postman](/readme-assets/postman/) se encuentran las colecciones de Postman, importante configurar la variable server segun se necesite, por defecto para ejecutar en local y docker se utiliza localhost:3001/, en serverless offline se utiliza localhost:3000/dev/**
 
 - para este caso el token del ticket corresponde al propio uuid de la columna id ya que sigue el estándar RFC 4122, en el caso hipotetico de que por cuestiones de seguridad no fuera conveniente utilizar el propio id de la tabla sería necesario agregar una nueva columna de token o si se prefiere generar desde el backend se podria utilizar la libreria UUID de npm para generar un UUID v4.
 
