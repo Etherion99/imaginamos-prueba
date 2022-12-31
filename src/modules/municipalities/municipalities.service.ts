@@ -3,8 +3,8 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { MunicipalityEntity } from '../../models/municipality/municipality.entity';
 import { IMunicipality } from '../../models/municipality/municipality.interface';
 import { Repository } from 'typeorm';
-import { IHttpResponse } from 'src/interfaces/http-response.interface';
-import { DepartmentEntity } from 'src/models/department/department.entity';
+import { IHttpResponse } from '../../interfaces/http-response.interface';
+import { DepartmentEntity } from '../../models/department/department.entity';
 
 @Injectable()
 export class MunicipalitiesService {

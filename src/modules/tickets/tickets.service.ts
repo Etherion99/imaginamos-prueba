@@ -3,11 +3,10 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { TicketEntity } from '../../models/ticket/ticket.entity';
 import { ITicket } from '../../models/ticket/ticket.interface';
 import { Repository } from 'typeorm';
-import { IHttpResponse } from 'src/interfaces/http-response.interface';
-import { DepartmentEntity } from 'src/models/department/department.entity';
-import { MunicipalityEntity } from 'src/models/municipality/municipality.entity';
-import { ClientEntity } from 'src/models/client/client.entity';
-import { TechnicianEntity } from 'src/models/technician/technician.entity';
+import { IHttpResponse } from '../../interfaces/http-response.interface';
+import { MunicipalityEntity } from '../../models/municipality/municipality.entity';
+import { ClientEntity } from '../../models/client/client.entity';
+import { TechnicianEntity } from '../../models/technician/technician.entity';
 
 @Injectable()
 export class TicketsService {

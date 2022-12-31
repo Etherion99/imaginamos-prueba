@@ -3,7 +3,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { ClientEntity } from '../../models/client/client.entity';
 import { IClient } from '../../models/client/client.interface';
 import { Repository } from 'typeorm';
-import { IHttpResponse } from 'src/interfaces/http-response.interface';
+import { IHttpResponse } from '../../interfaces/http-response.interface';
 
 @Injectable()
 export class ClientsService {

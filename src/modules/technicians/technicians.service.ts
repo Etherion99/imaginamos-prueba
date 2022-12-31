@@ -3,7 +3,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { TechnicianEntity } from '../../models/technician/technician.entity';
 import { ITechnician } from '../../models/technician/technician.interface';
 import { Repository } from 'typeorm';
-import { IHttpResponse } from 'src/interfaces/http-response.interface';
+import { IHttpResponse } from '../../interfaces/http-response.interface';
 
 @Injectable()
 export class TechniciansService {

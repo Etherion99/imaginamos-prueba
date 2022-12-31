@@ -7,7 +7,7 @@ import {
   Body,
   Param,
 } from '@nestjs/common';
-import { IHttpResponse } from 'src/interfaces/http-response.interface';
+import { IHttpResponse } from '../../interfaces/http-response.interface';
 import { ITicket } from '../../models/ticket/ticket.interface';
 import { TicketsService } from './tickets.service';
 

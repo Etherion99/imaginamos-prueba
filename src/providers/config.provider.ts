@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
-import appConfig, { validationSchema } from 'src/config/app.config';
-import databaseConfig from 'src/config/database.config';
+import appConfig, { validationSchema } from '../../config/app.config';
+import databaseConfig from '../../config/database.config';
 
 @Injectable()
 export class ConfigProvider {
