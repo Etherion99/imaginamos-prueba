@@ -8,3 +8,4 @@ dist
 .npmrc
 .build
 .serverless
+readme-assets

@@ -40,3 +40,6 @@ lerna-debug.log*
 # serverless build and deploy folders
 .build
 .serverless
+
+# asstes
+readme-assets
