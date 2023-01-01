@@ -77,7 +77,7 @@ export class TicketsService {
     }
   }
 
-  async findOne(id: number): Promise<IHttpResponse> {
+  async findOne(id: string): Promise<IHttpResponse> {
     try {
       const ticket = await this.ticketsRepository.findOne({
         where: {
@@ -116,7 +116,7 @@ export class TicketsService {
     }
   }
 
-  async update(id: number, ticketDTO: ITicket): Promise<IHttpResponse> {
+  async update(id: string, ticketDTO: ITicket): Promise<IHttpResponse> {
     try {
       const ticket = await this.ticketsRepository.findOneBy({
         id,
@@ -136,7 +136,7 @@ export class TicketsService {
     }
   }
 
-  async delete(id: number): Promise<IHttpResponse> {
+  async delete(id: string): Promise<IHttpResponse> {
     try {
       const deleted = (await this.ticketsRepository.delete(id)).affected > 0;
 
