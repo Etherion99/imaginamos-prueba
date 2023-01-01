@@ -21,7 +21,7 @@ export class TechniciansController {
   }
 
   @Get(':id')
-  findOne(@Param('id') id: number): Promise<IHttpResponse> {
+  findOne(@Param('id') id: string): Promise<IHttpResponse> {
     return this.techniciansService.findOne(id);
   }
 
@@ -32,19 +32,19 @@ export class TechniciansController {
 
   @Put(':id')
   update(
-    @Param('id') id: number,
+    @Param('id') id: string,
     @Body() technicianDTO: ITechnician,
   ): Promise<IHttpResponse> {
     return this.techniciansService.update(id, technicianDTO);
   }
 
   @Delete(':id')
-  delete(@Param('id') id: number): Promise<IHttpResponse> {
+  delete(@Param('id') id: string): Promise<IHttpResponse> {
     return this.techniciansService.delete(id);
   }
 
   @Get('/tickets/:id')
-  getTickets(@Param('id') id: number): Promise<IHttpResponse> {
+  getTickets(@Param('id') id: string): Promise<IHttpResponse> {
     return this.techniciansService.getTickets(id);
   }
 }

@@ -46,7 +46,7 @@ export class MunicipalitiesService {
     }
   }
 
-  async findOne(id: number): Promise<IHttpResponse> {
+  async findOne(id: string): Promise<IHttpResponse> {
     try {
       const municipality = await this.municipalitiesRepository.findOneBy({
         id,
@@ -81,7 +81,7 @@ export class MunicipalitiesService {
   }
 
   async update(
-    id: number,
+    id: string,
     municipalityDTO: IMunicipality,
   ): Promise<IHttpResponse> {
     try {
@@ -103,7 +103,7 @@ export class MunicipalitiesService {
     }
   }
 
-  async delete(id: number): Promise<IHttpResponse> {
+  async delete(id: string): Promise<IHttpResponse> {
     try {
       const deleted =
         (await this.municipalitiesRepository.delete(id)).affected > 0;

@@ -32,7 +32,7 @@ export class DepartmentsService {
     }
   }
 
-  async findOne(id: number): Promise<IHttpResponse> {
+  async findOne(id: string): Promise<IHttpResponse> {
     try {
       const department = await this.departmentsRepository.findOneBy({ id });
 
@@ -64,7 +64,7 @@ export class DepartmentsService {
     }
   }
 
-  async update(id: number, departmentDTO: IDepartment): Promise<IHttpResponse> {
+  async update(id: string, departmentDTO: IDepartment): Promise<IHttpResponse> {
     try {
       const department = await this.departmentsRepository.findOneBy({ id });
       const updated = Object.assign(department, departmentDTO);
@@ -82,7 +82,7 @@ export class DepartmentsService {
     }
   }
 
-  async delete(id: number): Promise<IHttpResponse> {
+  async delete(id: string): Promise<IHttpResponse> {
     try {
       const deleted =
         (await this.departmentsRepository.delete(id)).affected > 0;
@@ -98,7 +98,7 @@ export class DepartmentsService {
     }
   }
 
-  async getMunicipalities(id: number): Promise<IHttpResponse> {
+  async getMunicipalities(id: string): Promise<IHttpResponse> {
     try {
       const client = await this.departmentsRepository.findOne({
         where: { id },

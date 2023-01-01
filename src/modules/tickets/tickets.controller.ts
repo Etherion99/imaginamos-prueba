@@ -21,7 +21,7 @@ export class TicketsController {
   }
 
   @Get(':id')
-  findOne(@Param('id') id: number): Promise<IHttpResponse> {
+  findOne(@Param('id') id: string): Promise<IHttpResponse> {
     return this.ticketsService.findOne(id);
   }
 
@@ -32,14 +32,14 @@ export class TicketsController {
 
   @Put(':id')
   update(
-    @Param('id') id: number,
+    @Param('id') id: string,
     @Body() ticketDTO: ITicket,
   ): Promise<IHttpResponse> {
     return this.ticketsService.update(id, ticketDTO);
   }
 
   @Delete(':id')
-  delete(@Param('id') id: number): Promise<IHttpResponse> {
+  delete(@Param('id') id: string): Promise<IHttpResponse> {
     return this.ticketsService.delete(id);
   }
 }

@@ -21,7 +21,7 @@ export class ClientsController {
   }
 
   @Get(':id')
-  findOne(@Param('id') id: number): Promise<IHttpResponse> {
+  findOne(@Param('id') id: string): Promise<IHttpResponse> {
     return this.clientsService.findOne(id);
   }
 
@@ -32,19 +32,19 @@ export class ClientsController {
 
   @Put(':id')
   update(
-    @Param('id') id: number,
+    @Param('id') id: string,
     @Body() clientDTO: IClient,
   ): Promise<IHttpResponse> {
     return this.clientsService.update(id, clientDTO);
   }
 
   @Delete(':id')
-  delete(@Param('id') id: number): Promise<IHttpResponse> {
+  delete(@Param('id') id: string): Promise<IHttpResponse> {
     return this.clientsService.delete(id);
   }
 
   @Get('/tickets/:id')
-  getTickets(@Param('id') id: number): Promise<IHttpResponse> {
+  getTickets(@Param('id') id: string): Promise<IHttpResponse> {
     return this.clientsService.getTickets(id);
   }
 }

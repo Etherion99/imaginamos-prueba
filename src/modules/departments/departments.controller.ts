@@ -21,7 +21,7 @@ export class DepartmentsController {
   }
 
   @Get(':id')
-  findOne(@Param('id') id: number): Promise<IHttpResponse> {
+  findOne(@Param('id') id: string): Promise<IHttpResponse> {
     return this.departmentsService.findOne(id);
   }
 
@@ -32,19 +32,19 @@ export class DepartmentsController {
 
   @Put(':id')
   update(
-    @Param('id') id: number,
+    @Param('id') id: string,
     @Body() departmentDTO: IDepartment,
   ): Promise<IHttpResponse> {
     return this.departmentsService.update(id, departmentDTO);
   }
 
   @Delete(':id')
-  delete(@Param('id') id: number): Promise<IHttpResponse> {
+  delete(@Param('id') id: string): Promise<IHttpResponse> {
     return this.departmentsService.delete(id);
   }
 
   @Get('/municipalities/:id')
-  getMunicipalities(@Param('id') id: number): Promise<IHttpResponse> {
+  getMunicipalities(@Param('id') id: string): Promise<IHttpResponse> {
     return this.departmentsService.getMunicipalities(id);
   }
 }

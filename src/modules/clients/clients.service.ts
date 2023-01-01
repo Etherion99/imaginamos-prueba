@@ -33,7 +33,7 @@ export class ClientsService {
     }
   }
 
-  async findOne(id: number): Promise<IHttpResponse> {
+  async findOne(id: string): Promise<IHttpResponse> {
     try {
       const client = await this.clientsRepository.findOneBy({ id });
 
@@ -65,7 +65,7 @@ export class ClientsService {
     }
   }
 
-  async update(id: number, clientDTO: IClient): Promise<IHttpResponse> {
+  async update(id: string, clientDTO: IClient): Promise<IHttpResponse> {
     try {
       const client = await this.clientsRepository.findOneBy({ id });
       const updated = Object.assign(client, clientDTO);
@@ -83,7 +83,7 @@ export class ClientsService {
     }
   }
 
-  async delete(id: number): Promise<IHttpResponse> {
+  async delete(id: string): Promise<IHttpResponse> {
     try {
       const deleted = (await this.clientsRepository.delete(id)).affected > 0;
 
@@ -98,7 +98,7 @@ export class ClientsService {
     }
   }
 
-  async getTickets(id: number): Promise<IHttpResponse> {
+  async getTickets(id: string): Promise<IHttpResponse> {
     try {
       const client = await this.clientsRepository.findOne({
         where: { id },
