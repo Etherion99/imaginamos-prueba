@@ -1,12 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { TicketsService } from '../../src/modules/tickets/tickets.service';
 import { TicketsController } from '../../src/modules/tickets/tickets.controller';
-import { IHttpResponse } from '../../src/interfaces/http-response.interface';
-import { TechnicianEntity } from '../../src/models/technician/technician.entity';
-import { ClientEntity } from '../../src/models/client/client.entity';
-import { MunicipalityEntity } from '../../src/models/municipality/municipality.entity';
-import { getRepositoryToken } from '@nestjs/typeorm';
-import { TicketEntity } from '../../src/models/ticket/ticket.entity';
 
 describe('TicketsController', () => {
   let controller: TicketsController;
@@ -157,6 +151,7 @@ describe('TicketsController', () => {
     expect(mockTicketsService.create).toHaveBeenCalledWith(
       createOrUpdateTicketModel,
     );
+    expect(mockTicketsService.create).toHaveBeenCalledTimes(1);
   });
 
   it('should find all Tickets', async () => {
@@ -190,6 +185,7 @@ describe('TicketsController', () => {
     });
 
     expect(mockTicketsService.findAll).toHaveBeenCalled();
+    expect(mockTicketsService.findAll).toHaveBeenCalledTimes(1);
   });
 
   it('should find one Ticket', async () => {
@@ -254,6 +250,7 @@ describe('TicketsController', () => {
       'a40a7e40-0a54-403a-afec-34d218e7a264',
       createOrUpdateTicketModel,
     );
+    expect(mockTicketsService.update).toHaveBeenCalledTimes(1);
   });
 
   it('should delete one Ticket', async () => {
