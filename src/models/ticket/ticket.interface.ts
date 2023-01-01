@@ -3,7 +3,7 @@ import { IMunicipality } from '../municipality/municipality.interface';
 import { ITechnician } from '../technician/technician.interface';
 
 export interface ITicket {
-  id: number;
+  id?: string;
   client: IClient;
   technician: ITechnician;
   municipality: IMunicipality;

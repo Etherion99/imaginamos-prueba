@@ -7,7 +7,7 @@ import { ITicket } from './ticket.interface';
 @Entity()
 export class TicketEntity implements ITicket {
   @PrimaryGeneratedColumn('uuid')
-  id: number;
+  id: string;
 
   @ManyToOne((type) => ClientEntity, (client) => client.tickets)
   client: ClientEntity;

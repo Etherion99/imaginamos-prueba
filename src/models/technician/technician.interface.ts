@@ -1,5 +1,5 @@
 export interface ITechnician {
-  id: number;
+  id?: string;
   firstName: string;
   lastName: string;
   admissionDate: Date;

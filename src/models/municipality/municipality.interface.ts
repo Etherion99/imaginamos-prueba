@@ -1,7 +1,7 @@
 import { IDepartment } from '../department/department.interface';
 
 export interface IMunicipality {
-  id: number;
+  id?: string;
   name: string;
   department: IDepartment;
 }

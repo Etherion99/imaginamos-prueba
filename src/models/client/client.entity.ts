@@ -5,7 +5,7 @@ import { IClient } from './client.interface';
 @Entity()
 export class ClientEntity implements IClient {
   @PrimaryGeneratedColumn('uuid')
-  id: number;
+  id: string;
 
   @Column()
   firstName: string;

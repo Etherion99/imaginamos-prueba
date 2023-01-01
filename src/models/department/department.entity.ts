@@ -5,7 +5,7 @@ import { IDepartment } from './department.interface';
 @Entity()
 export class DepartmentEntity implements IDepartment {
   @PrimaryGeneratedColumn('uuid')
-  id: number;
+  id: string;
 
   @Column()
   name: string;

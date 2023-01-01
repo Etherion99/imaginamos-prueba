@@ -5,7 +5,7 @@ import { ITechnician } from './technician.interface';
 @Entity()
 export class TechnicianEntity implements ITechnician {
   @PrimaryGeneratedColumn('uuid')
-  id: number;
+  id: string;
 
   @Column()
   firstName: string;

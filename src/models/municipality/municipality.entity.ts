@@ -12,7 +12,7 @@ import { IMunicipality as IMunicipality } from './municipality.interface';
 @Entity()
 export class MunicipalityEntity implements IMunicipality {
   @PrimaryGeneratedColumn('uuid')
-  id: number;
+  id: string;
 
   @Column()
   name: string;
