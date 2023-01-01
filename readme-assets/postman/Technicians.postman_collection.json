@@ -12,11 +12,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:3001/technicians",
+					"raw": "{{server}}/technicians",
 					"host": [
-						"localhost"
+						"{{server}}"
 					],
-					"port": "3001",
 					"path": [
 						"technicians"
 					]
@@ -30,11 +29,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:3001/technicians/e5619291-0c32-45b0-8018-0f3ae62ee7ad",
+					"raw": "{{server}}/technicians/e5619291-0c32-45b0-8018-0f3ae62ee7ad",
 					"host": [
-						"localhost"
+						"{{server}}"
 					],
-					"port": "3001",
 					"path": [
 						"technicians",
 						"e5619291-0c32-45b0-8018-0f3ae62ee7ad"
@@ -50,7 +48,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"firstName\": \"Duvan2\",\r\n    \"lastName\": \"Martinez2\",\r\n    \"admissionDate\": \"2022-12-30 00:00:00+00\"\r\n}",
+					"raw": "{\r\n    \"firstName\": \"Duvan\",\r\n    \"lastName\": \"Martinez\",\r\n    \"admissionDate\": \"2022-12-30 00:00:00+00\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -58,11 +56,10 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3001/technicians",
+					"raw": "{{server}}/technicians",
 					"host": [
-						"localhost"
+						"{{server}}"
 					],
-					"port": "3001",
 					"path": [
 						"technicians"
 					]
@@ -85,11 +82,10 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3001/technicians/e5619291-0c32-45b0-8018-0f3ae62ee7ad",
+					"raw": "{{server}}/technicians/e5619291-0c32-45b0-8018-0f3ae62ee7ad",
 					"host": [
-						"localhost"
+						"{{server}}"
 					],
-					"port": "3001",
 					"path": [
 						"technicians",
 						"e5619291-0c32-45b0-8018-0f3ae62ee7ad"
@@ -104,11 +100,10 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "localhost:3001/technicians/e5619291-0c32-45b0-8018-0f3ae62ee7ad",
+					"raw": "{{server}}/technicians/e5619291-0c32-45b0-8018-0f3ae62ee7ad",
 					"host": [
-						"localhost"
+						"{{server}}"
 					],
-					"port": "3001",
 					"path": [
 						"technicians",
 						"e5619291-0c32-45b0-8018-0f3ae62ee7ad"
@@ -123,11 +118,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:3001/technicians/tickets/9d3abeb4-4fa4-4ef3-a0cd-09741cd64670",
+					"raw": "{{server}}/technicians/tickets/9d3abeb4-4fa4-4ef3-a0cd-09741cd64670",
 					"host": [
-						"localhost"
+						"{{server}}"
 					],
-					"port": "3001",
 					"path": [
 						"technicians",
 						"tickets",

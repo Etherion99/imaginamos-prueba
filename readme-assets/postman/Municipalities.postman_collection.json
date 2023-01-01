@@ -12,11 +12,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:3001/municipalities",
+					"raw": "{{server}}/municipalities",
 					"host": [
-						"localhost"
+						"{{server}}"
 					],
-					"port": "3001",
 					"path": [
 						"municipalities"
 					]
@@ -30,11 +29,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:3001/municipalities/bbc0fb15-cda2-45b0-a94f-17c650951040",
+					"raw": "{{server}}/municipalities/bbc0fb15-cda2-45b0-a94f-17c650951040",
 					"host": [
-						"localhost"
+						"{{server}}"
 					],
-					"port": "3001",
 					"path": [
 						"municipalities",
 						"bbc0fb15-cda2-45b0-a94f-17c650951040"
@@ -50,7 +48,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Bucaramanga\",\r\n    \"department\": {\r\n        \"id\": \"d9f15432-809f-4b9a-b774-5bd285fa0dfd\"\r\n    }\r\n}",
+					"raw": "{\r\n    \"name\": \"Bucaramanga\",\r\n    \"department\": {\r\n        \"id\": \"121918e8-6933-45a0-88b3-e2c9efc0ac38\"\r\n    }\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -58,11 +56,10 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3001/municipalities",
+					"raw": "{{server}}/municipalities",
 					"host": [
-						"localhost"
+						"{{server}}"
 					],
-					"port": "3001",
 					"path": [
 						"municipalities"
 					]
@@ -85,11 +82,10 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3001/municipalities/d90f5477-d859-4c52-beb0-4146572dbc3b",
+					"raw": "{{server}}/municipalities/d90f5477-d859-4c52-beb0-4146572dbc3b",
 					"host": [
-						"localhost"
+						"{{server}}"
 					],
-					"port": "3001",
 					"path": [
 						"municipalities",
 						"d90f5477-d859-4c52-beb0-4146572dbc3b"
@@ -104,11 +100,10 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "localhost:3001/municipalities/6f80f0c7-65bc-4d13-92c5-e697ee5f257e",
+					"raw": "{{server}}/municipalities/6f80f0c7-65bc-4d13-92c5-e697ee5f257e",
 					"host": [
-						"localhost"
+						"{{server}}"
 					],
-					"port": "3001",
 					"path": [
 						"municipalities",
 						"6f80f0c7-65bc-4d13-92c5-e697ee5f257e"

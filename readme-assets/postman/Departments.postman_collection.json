@@ -118,14 +118,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{server}}/departments/municipalities/d9f15432-809f-4b9a-b774-5bd285fa0dfd",
+					"raw": "{{server}}/departments/municipalities/121918e8-6933-45a0-88b3-e2c9efc0ac38",
 					"host": [
 						"{{server}}"
 					],
 					"path": [
 						"departments",
 						"municipalities",
-						"d9f15432-809f-4b9a-b774-5bd285fa0dfd"
+						"121918e8-6933-45a0-88b3-e2c9efc0ac38"
 					]
 				}
 			},
