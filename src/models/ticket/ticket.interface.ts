@@ -5,7 +5,7 @@ import { ITechnician } from '../technician/technician.interface';
 export interface ITicket {
   id?: string;
   client: IClient;
-  technician: ITechnician;
+  technician?: ITechnician;
   municipality: IMunicipality;
   address: string;
   payment: number;
