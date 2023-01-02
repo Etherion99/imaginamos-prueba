@@ -53,6 +53,12 @@ Backend en NestJS (Node) para prueba técnica de imaginamos dockerizada y config
 
   - En técnicos se agregó el endpoint para obtener los tiquetes asociados para que puedan ver las solicitudes atendidas y pendientes.
 
+- para inicializar el servidor en modo desarrollo ejecutar los siguienets comandos:
+```bash
+npm i
+npm run start
+```
+
 # Testing
 
 - Las pruebas unitarias se realizan con jest y las e2e con supertest.
@@ -61,12 +67,12 @@ Backend en NestJS (Node) para prueba técnica de imaginamos dockerizada y config
 
 - **Para ejecutar las pruebas unitarias utilizar el comando:**
 ```bash
-$ npm run test
+npm run test
 ```
 
 - **Para ejecutar las pruebas e2e utilizar el comando:**
 ```bash
-$ npm run test:e2e
+npm run test:e2e
 ```
 
 # NestJS
@@ -91,7 +97,7 @@ $ npm run test:e2e
   1. Los archivos de Dockerfile.dev, .dockerignore y docker-compose.yml ya se encuentran en el repositorio.
   2. Ejecutar el siguiente comando en la raiz del proyecto (importante tener el local detenido para evitar conflicto de puertos).
   ```bash
-  $ docker-compose up --build
+  docker-compose up --build
   ```
 
 # Serverless
@@ -101,7 +107,13 @@ $ npm run test:e2e
 - Proceso de despliegue:
   1. Copiar el archivo .env en la raíz del proyecto.
   2. Ejecutar un npm i.
+  ```bash
+  npm i
+  ```
   3. Ejecutar un serverless deploy (el proceso tarda entre 300 y 400 segundos).
+  ```bash
+  serverless deploy
+  ```
   4. Agregar la url provista en la consola como variable "server" en el postman.
 
 - **actualmente la versión final de la API esta desplegada en: [AWS lambda function deployed](https://wjbbdxkg0f.execute-api.us-east-1.amazonaws.com/dev/clients).**
