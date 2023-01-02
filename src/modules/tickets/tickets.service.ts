@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { TicketEntity } from '../../models/ticket/ticket.entity';
-import { ITicket } from '../../models/ticket/ticket.interface';
+import { DTOTicket } from '../../models/ticket/ticket.dto';
 import { Repository } from 'typeorm';
 import { IHttpResponse } from '../../interfaces/http-response.interface';
 import { MunicipalityEntity } from '../../models/municipality/municipality.entity';
@@ -21,7 +21,7 @@ export class TicketsService {
     private readonly techniciansRepository: Repository<TechnicianEntity>,
   ) {}
 
-  async create(ticketDTO: ITicket): Promise<IHttpResponse> {
+  async create(ticketDTO: DTOTicket): Promise<IHttpResponse> {
     try {
       const ticket = new TicketEntity();
 
@@ -116,7 +116,7 @@ export class TicketsService {
     }
   }
 
-  async update(id: string, ticketDTO: ITicket): Promise<IHttpResponse> {
+  async update(id: string, ticketDTO: DTOTicket): Promise<IHttpResponse> {
     try {
       const ticket = await this.ticketsRepository.findOneBy({
         id,

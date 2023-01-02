@@ -1,9 +1,9 @@
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 import { TicketEntity } from '../ticket/ticket.entity';
-import { ITechnician } from './technician.interface';
+import { DTOTechnician } from './technician.dto';
 
 @Entity()
-export class TechnicianEntity implements ITechnician {
+export class TechnicianEntity implements DTOTechnician {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 

@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { MunicipalityEntity } from '../../models/municipality/municipality.entity';
-import { IMunicipality } from '../../models/municipality/municipality.interface';
+import { DTOMunicipality } from '../../models/municipality/municipality.dto';
 import { Repository } from 'typeorm';
 import { IHttpResponse } from '../../interfaces/http-response.interface';
 import { DepartmentEntity } from '../../models/department/department.entity';
@@ -15,7 +15,7 @@ export class MunicipalitiesService {
     private readonly departmentsRepository: Repository<DepartmentEntity>,
   ) {}
 
-  async create(municipalityDTO: IMunicipality): Promise<IHttpResponse> {
+  async create(municipalityDTO: DTOMunicipality): Promise<IHttpResponse> {
     try {
       const municipality = new MunicipalityEntity();
 
@@ -82,7 +82,7 @@ export class MunicipalitiesService {
 
   async update(
     id: string,
-    municipalityDTO: IMunicipality,
+    municipalityDTO: DTOMunicipality,
   ): Promise<IHttpResponse> {
     try {
       const municipality = await this.municipalitiesRepository.findOneBy({

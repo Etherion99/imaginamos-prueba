@@ -7,10 +7,10 @@ import {
 } from 'typeorm';
 import { DepartmentEntity } from '../department/department.entity';
 import { TicketEntity } from '../ticket/ticket.entity';
-import { IMunicipality as IMunicipality } from './municipality.interface';
+import { DTOMunicipality as DTOMunicipality } from './municipality.dto';
 
 @Entity()
-export class MunicipalityEntity implements IMunicipality {
+export class MunicipalityEntity implements DTOMunicipality {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 

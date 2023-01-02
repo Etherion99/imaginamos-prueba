@@ -1,9 +1,9 @@
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 import { MunicipalityEntity } from '../municipality/municipality.entity';
-import { IDepartment } from './department.interface';
+import { DTODepartment } from './department.dto';
 
 @Entity()
-export class DepartmentEntity implements IDepartment {
+export class DepartmentEntity implements DTODepartment {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 

@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { DepartmentEntity } from '../../models/department/department.entity';
-import { IDepartment } from '../../models/department/department.interface';
+import { DTODepartment } from '../../models/department/department.dto';
 import { Repository } from 'typeorm';
 import { IHttpResponse } from '../../interfaces/http-response.interface';
 
@@ -12,7 +12,7 @@ export class DepartmentsService {
     private readonly departmentsRepository: Repository<DepartmentEntity>,
   ) {}
 
-  async create(departmentDTO: IDepartment): Promise<IHttpResponse> {
+  async create(departmentDTO: DTODepartment): Promise<IHttpResponse> {
     try {
       const department = new DepartmentEntity();
 
@@ -64,7 +64,7 @@ export class DepartmentsService {
     }
   }
 
-  async update(id: string, departmentDTO: IDepartment): Promise<IHttpResponse> {
+  async update(id: string, departmentDTO: DTODepartment): Promise<IHttpResponse> {
     try {
       const department = await this.departmentsRepository.findOneBy({ id });
       const updated = Object.assign(department, departmentDTO);

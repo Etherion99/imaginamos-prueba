@@ -2,10 +2,10 @@ import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
 import { ClientEntity } from '../client/client.entity';
 import { MunicipalityEntity } from '../municipality/municipality.entity';
 import { TechnicianEntity } from '../technician/technician.entity';
-import { ITicket } from './ticket.interface';
+import { DTOTicket } from './ticket.dto';
 
 @Entity()
-export class TicketEntity implements ITicket {
+export class TicketEntity implements DTOTicket {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 

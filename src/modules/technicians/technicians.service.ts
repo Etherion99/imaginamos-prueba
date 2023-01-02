@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { TechnicianEntity } from '../../models/technician/technician.entity';
-import { ITechnician } from '../../models/technician/technician.interface';
+import { DTOTechnician } from '../../models/technician/technician.dto';
 import { Repository } from 'typeorm';
 import { IHttpResponse } from '../../interfaces/http-response.interface';
 
@@ -12,7 +12,7 @@ export class TechniciansService {
     private readonly techniciansRepository: Repository<TechnicianEntity>,
   ) {}
 
-  async create(technicianDTO: ITechnician): Promise<IHttpResponse> {
+  async create(technicianDTO: DTOTechnician): Promise<IHttpResponse> {
     try {
       const technician = new TechnicianEntity();
 
@@ -66,7 +66,7 @@ export class TechniciansService {
     }
   }
 
-  async update(id: string, technicianDTO: ITechnician): Promise<IHttpResponse> {
+  async update(id: string, technicianDTO: DTOTechnician): Promise<IHttpResponse> {
     try {
       const technician = await this.techniciansRepository.findOneBy({ id });
       const updated = Object.assign(technician, technicianDTO);

@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { ClientEntity } from '../../models/client/client.entity';
-import { IClient } from '../../models/client/client.interface';
+import { DTOClient } from '../../models/client/client.dto';
 import { Repository } from 'typeorm';
 import { IHttpResponse } from '../../interfaces/http-response.interface';
 
@@ -12,7 +12,7 @@ export class ClientsService {
     private readonly clientsRepository: Repository<ClientEntity>,
   ) {}
 
-  async create(clientDTO: IClient): Promise<IHttpResponse> {
+  async create(clientDTO: DTOClient): Promise<IHttpResponse> {
     try {
       const client = new ClientEntity();
 
@@ -65,7 +65,7 @@ export class ClientsService {
     }
   }
 
-  async update(id: string, clientDTO: IClient): Promise<IHttpResponse> {
+  async update(id: string, clientDTO: DTOClient): Promise<IHttpResponse> {
     try {
       const client = await this.clientsRepository.findOneBy({ id });
       const updated = Object.assign(client, clientDTO);
