@@ -57,7 +57,17 @@ Backend en NestJS (Node) para prueba técnica de imaginamos dockerizada y config
 
 - Las pruebas unitarias se realizan con jest y las e2e con supertest.
 
-- **debido a que en su mayoría es un CRUD básico se realiza el testing del servicio y controlador ticket como modelo de lo que podría realizarse con los otros.**
+- **Debido a que en su mayoría es un CRUD básico se realiza el testing del servicio y controlador ticket como modelo de lo que podría realizarse con los otros.**
+
+- **Para ejecutar las pruebas unitarias utilizar el comando:**
+```bash
+$ npm run test
+```
+
+- **Para ejecutar las pruebas e2e utilizar el comando:**
+```bash
+$ npm run test:e2e
+```
 
 # NestJS
 
