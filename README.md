@@ -1,6 +1,10 @@
 # imaginamos-prueba
 Backend en NestJS (Node) para prueba técnica de imaginamos dockerizada y configurada para despliegue con serverless framework.
 
+![NestJS](https://www.google.com/url?sa=i&url=https%3A%2F%2Fseeklogo.com%2Fvector-logo%2F341269%2Fnestjs&psig=AOvVaw1w38FGEl3m7DsQaB0ebb1Z&ust=1672748019559000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCPiYsI3uqPwCFQAAAAAdAAAAABAE "NestJS")
+
+![NestJS](https://static-00.iconduck.com/assets.00/postman-icon-497x512-beb7sy75.pngE "NestJS")
+
 # modelo
 
 ![Relational Model](/readme-assets/relational-model.jpeg?raw=true "Relational Model")
@@ -23,6 +27,8 @@ Backend en NestJS (Node) para prueba técnica de imaginamos dockerizada y config
 # API
 
 - **En la carpeta [readme-assets/postman](/readme-assets/postman/) se encuentran las colecciones de Postman, importante configurar la variable server segun se necesite, por defecto para ejecutar en local y docker se utiliza localhost:3001/, en serverless offline se utiliza localhost:3000/dev/**
+
+- **Si desea dar un vistazo rápido al API mediante postman online puede usar este link: [Postman online](https://www.postman.com/webdevelopment3/workspace/imaginamos/overview) sin embargo, si desea utilizarlas se recomienda descargar las colecciones en Postman Desktop**
 
 - **La documentación de Swagger está disponible en: http://localhost:3001/api#/**
 
