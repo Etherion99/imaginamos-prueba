@@ -76,5 +76,5 @@ Backend en NestJS (Node) para prueba técnica de imaginamos dockerizada y config
   3. Ejecutar un serverless deploy (el proceso tarda entre 300 y 400 segundos).
   4. Agregar la url provista en la consola como variable "server" en el postman.
 
-- actualmente la versión final de la API esta desplegada en: [AWS lambda function deployed](https://wjbbdxkg0f.execute-api.us-east-1.amazonaws.com/dev/clients).
+- **actualmente la versión final de la API esta desplegada en: [AWS lambda function deployed](https://wjbbdxkg0f.execute-api.us-east-1.amazonaws.com/dev/clients).**
 
