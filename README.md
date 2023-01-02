@@ -89,7 +89,10 @@ $ npm run test:e2e
 
 - proceso de dockerizado:
   1. Los archivos de Dockerfile.dev, .dockerignore y docker-compose.yml ya se encuentran en el repositorio.
-  2. Ejecutar el comando docker-compose up --build en la raiz del proyecto (importante tener el local detenido para evitar conflicto de puertos).
+  2. Ejecutar el siguiente comando en la raiz del proyecto (importante tener el local detenido para evitar conflicto de puertos).
+  ```bash
+  $ docker-compose up --build
+  ```
 
 # Serverless
 
