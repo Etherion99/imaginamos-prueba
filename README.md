@@ -24,6 +24,8 @@ Backend en NestJS (Node) para prueba técnica de imaginamos dockerizada y config
 
 - **En la carpeta [readme-assets/postman](/readme-assets/postman/) se encuentran las colecciones de Postman, importante configurar la variable server segun se necesite, por defecto para ejecutar en local y docker se utiliza localhost:3001/, en serverless offline se utiliza localhost:3000/dev/**
 
+- **La documentación de Swagger está disponible en: http://localhost:3001/api#/**
+
 - Para este caso el token del ticket corresponde al propio uuid de la columna id ya que sigue el estándar RFC 4122, en el caso hipotético de que por cuestiones de seguridad no fuera conveniente utilizar el propio id de la tabla sería necesario agregar una nueva columna de token o si se prefiere generar desde el backend se podría utilizar la librería UUID de npm para generar un UUID v4.
 
 - La asignación de técnicos se hace de manera aleatoria a nivel de BD para evitar tener que consultar la lista completa de técnicos y seleccionarlo generando un numero pseudoaleatorio lo cual puede tornarse pesado en sistemas muy grandes.
