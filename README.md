@@ -1,9 +1,17 @@
 # imaginamos-prueba
 Backend en NestJS (Node) para prueba técnica de imaginamos dockerizada y configurada para despliegue con serverless framework.
 
-<div style="display:flex;">
-  <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fseeklogo.com%2Fvector-logo%2F341269%2Fnestjs&psig=AOvVaw1w38FGEl3m7DsQaB0ebb1Z&ust=1672748019559000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCPiYsI3uqPwCFQAAAAAdAAAAABAE">
-  <img src="https://static-00.iconduck.com/assets.00/postman-icon-497x512-beb7sy75.pngE">
+<div align="center">
+  <img src="https://www.imaginamos.com/wp-content/uploads/2021/04/Brand-300x77.png">
+</div><br><br>
+
+<div align="center">
+  <img width="10.666%" src="https://seeklogo.com/images/N/nestjs-logo-09342F76C0-seeklogo.com.png">
+  <img width="10.666%" src="https://static-00.iconduck.com/assets.00/postman-icon-497x512-beb7sy75.png">
+  <img width="16.666%" src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png.webp">
+  <img width="18.666%" src="https://files.readme.io/ffb4c59-Serverless.png">
+  <img width="18.666%" src="https://miro.medium.com/max/828/0*w8gdoOuEickHYsZk.webp">
+  <img width="10.666%" src="https://miro.medium.com/max/600/1*veOyRtKTPeoqC_VlWNUc5Q.webp">
 </div>
 
 # modelo
